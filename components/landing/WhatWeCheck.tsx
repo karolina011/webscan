@@ -26,15 +26,19 @@ export function WhatWeCheck() {
               key={card.title}
               className="lift flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 shadow-card"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-primary-100 bg-primary-50 text-primary-800">
-                <Icon name={card.icon} className="h-[18px] w-[18px]" />
-              </span>
-              <h3 className="mt-4 text-lg font-extrabold leading-tight tracking-tight text-neutral-900">
-                {card.title}
-              </h3>
-              <p className="mt-1 text-[13px] font-medium text-neutral-500">
-                {card.tagline}
-              </p>
+              <div className="flex items-start gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-primary-100 bg-primary-50 text-primary-800">
+                  <Icon name={card.icon} className="h-[18px] w-[18px]" />
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-extrabold leading-tight tracking-tight text-neutral-900">
+                    {card.title}
+                  </h3>
+                  <p className="mt-1 text-[13px] font-medium text-neutral-500">
+                    {card.tagline}
+                  </p>
+                </div>
+              </div>
               <ul className="mt-4 flex flex-col gap-1.5 text-[13.5px] text-neutral-700">
                 {card.items.map((item) => (
                   <li key={item} className="flex gap-2">
