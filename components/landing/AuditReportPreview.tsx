@@ -52,7 +52,7 @@ export function AuditReportPreview() {
       {/* Back card — Step 1 */}
       <aside
         aria-hidden
-        className="absolute -left-20 -top-10 z-0 hidden w-[250px] rotate-[-10deg] rounded-2xl border border-neutral-200 bg-white p-4 opacity-55 shadow-card md:block lg:-left-32 lg:-top-14 lg:w-[280px]"
+        className="absolute -left-16 -top-8 z-0 hidden w-[210px] rotate-[-10deg] rounded-2xl border border-neutral-200 bg-white p-3 opacity-55 shadow-card md:block lg:-left-24 lg:-top-10 lg:w-[230px]"
       >
         <div className="mb-3 flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-neutral-200" />
@@ -80,7 +80,7 @@ export function AuditReportPreview() {
       {/* Middle card — Step 2 */}
       <aside
         aria-hidden
-        className="absolute -left-8 -top-4 z-[5] hidden w-[280px] rotate-[-5deg] rounded-2xl border border-neutral-200 bg-white p-4 shadow-card md:block lg:-left-16 lg:-top-6 lg:w-[310px]"
+        className="absolute -left-6 -top-3 z-[5] hidden w-[240px] rotate-[-5deg] rounded-2xl border border-neutral-200 bg-white p-3 shadow-card md:block lg:-left-12 lg:-top-5 lg:w-[260px]"
       >
         <div className="mb-3 flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-50">
@@ -158,49 +158,49 @@ export function AuditReportPreview() {
       </aside>
 
       {/* Front card — Step 3 (full report) */}
-      <article className="relative z-10 w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-hover md:ml-auto md:w-[460px] lg:w-[520px] xl:w-[560px]">
+      <article className="relative z-10 w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-hover md:ml-auto md:w-[400px] lg:w-[440px] xl:w-[480px]">
         {/* browser chrome */}
-        <div className="flex h-10 items-center gap-2 border-b border-neutral-200 bg-neutral-50 px-4">
-          <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-          <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-          <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-          <div className="mx-3 flex h-6 flex-1 items-center gap-2 rounded-md border border-neutral-200 bg-white px-3">
-            <Lock className="h-3 w-3 text-neutral-400" aria-hidden />
-            <span className="truncate font-mono text-[11px] text-neutral-500">
+        <div className="flex h-8 items-center gap-2 border-b border-neutral-200 bg-neutral-50 px-3">
+          <span className="h-2 w-2 rounded-full bg-neutral-200" />
+          <span className="h-2 w-2 rounded-full bg-neutral-200" />
+          <span className="h-2 w-2 rounded-full bg-neutral-200" />
+          <div className="mx-2.5 flex h-5 flex-1 items-center gap-1.5 rounded-md border border-neutral-200 bg-white px-2.5">
+            <Lock className="h-2.5 w-2.5 text-neutral-400" aria-hidden />
+            <span className="truncate font-mono text-[10px] text-neutral-500">
               {step3.browserUrl}
             </span>
           </div>
-          <RefreshCw className="h-3.5 w-3.5 text-neutral-400" aria-hidden />
+          <RefreshCw className="h-3 w-3 text-neutral-400" aria-hidden />
         </div>
 
-        <div className="p-5 sm:p-6">
+        <div className="p-4 sm:p-5">
           {/* heading */}
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-                <Globe className="h-3.5 w-3.5" aria-hidden />
+              <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
+                <Globe className="h-3 w-3" aria-hidden />
                 {step3.reportLabel}
                 <span className="ml-1 text-[9px] font-bold text-neutral-400">
                   {step3.stepLabel}
                 </span>
               </div>
-              <div className="mt-1 truncate text-[22px] font-extrabold tracking-tight text-neutral-900">
+              <div className="mt-0.5 truncate text-[18px] font-extrabold tracking-tight text-neutral-900">
                 {step3.domain}
               </div>
-              <div className="mt-1 text-[12px] font-medium text-neutral-500">
+              <div className="mt-0.5 text-[11px] font-medium text-neutral-500">
                 {step3.meta}
               </div>
             </div>
-            <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-destructive-border bg-destructive-bg px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-destructive">
+            <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-destructive-border bg-destructive-bg px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-destructive">
               <span className="h-1.5 w-1.5 rounded-full bg-destructive" />
               {step3.statusBadge}
             </span>
           </div>
 
           {/* gauge + counts */}
-          <div className="mt-5 flex items-center gap-5">
+          <div className="mt-4 flex items-center gap-4">
             <div className="relative shrink-0">
-              <svg width="116" height="116" viewBox="0 0 116 116" aria-hidden>
+              <svg width="92" height="92" viewBox="0 0 116 116" aria-hidden>
                 <circle
                   cx="58"
                   cy="58"
@@ -222,23 +222,23 @@ export function AuditReportPreview() {
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="text-[34px] font-black leading-none tracking-tighter text-neutral-900">
+                <div className="text-[26px] font-black leading-none tracking-tighter text-neutral-900">
                   {step3.score}
                 </div>
-                <div className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-neutral-500">
+                <div className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-neutral-500">
                   / 100
                 </div>
               </div>
             </div>
 
             <div className="min-w-0 flex-1">
-              <div className="text-[13px] font-bold text-neutral-800">
+              <div className="text-[12px] font-bold text-neutral-800">
                 {step3.summaryTitle}
               </div>
-              <div className="mt-1 text-[12px] leading-snug text-neutral-600">
+              <div className="mt-0.5 text-[11px] leading-snug text-neutral-600">
                 {step3.summaryBody}
               </div>
-              <div className="mt-3 grid grid-cols-3 gap-1.5">
+              <div className="mt-2.5 grid grid-cols-3 gap-1.5">
                 <Count
                   count={step3.counts.critical}
                   label={step3.countLabels.critical}
@@ -265,38 +265,38 @@ export function AuditReportPreview() {
           </div>
 
           {/* issue rows */}
-          <div className="mt-5 flex flex-col gap-2">
+          <div className="mt-4 flex flex-col gap-1.5">
             {step3.issues.map((issue) => {
               const s = issueStyle[issue.severity];
               return (
                 <div
                   key={issue.title}
                   className={cn(
-                    "group flex items-center gap-3 rounded-xl border p-3",
+                    "group flex items-center gap-2.5 rounded-xl border p-2.5",
                     s.container,
                   )}
                 >
                   <span
                     className={cn(
-                      "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border",
+                      "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border",
                       s.iconBox,
                       s.iconColor,
                     )}
                   >
-                    <Icon name={issue.icon} className="h-4 w-4" />
+                    <Icon name={issue.icon} className="h-3.5 w-3.5" />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[13px] font-bold leading-tight text-neutral-900">
+                    <div className="text-[12px] font-bold leading-tight text-neutral-900">
                       {issue.title}
                     </div>
-                    <div className="mt-0.5 text-[11.5px] text-neutral-600">
+                    <div className="mt-0.5 text-[10.5px] text-neutral-600">
                       {issue.body}
                     </div>
                   </div>
-                  <div className="flex shrink-0 flex-col items-end gap-1">
+                  <div className="flex shrink-0 flex-col items-end gap-0.5">
                     <span
                       className={cn(
-                        "rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider",
+                        "rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider",
                         s.badge,
                       )}
                     >
@@ -305,7 +305,7 @@ export function AuditReportPreview() {
                     <a
                       href="#fix"
                       className={cn(
-                        "inline-flex items-center gap-0.5 text-[10.5px] font-bold",
+                        "inline-flex items-center gap-0.5 text-[10px] font-bold",
                         s.link,
                       )}
                     >
@@ -337,13 +337,13 @@ function Count({
   text: string;
 }) {
   return (
-    <div className={cn("rounded-lg border py-1.5 text-center", bg, border)}>
-      <div className={cn("text-[13px] font-extrabold leading-none", text)}>
+    <div className={cn("rounded-lg border py-1 text-center", bg, border)}>
+      <div className={cn("text-[12px] font-extrabold leading-none", text)}>
         {count}
       </div>
       <div
         className={cn(
-          "mt-0.5 text-[9px] font-semibold uppercase tracking-wider",
+          "mt-0.5 text-[8.5px] font-semibold uppercase tracking-wider",
           text,
           "opacity-80",
         )}

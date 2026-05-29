@@ -14,18 +14,18 @@ export function HowItWorks() {
   const [step1, step2, step3] = t.steps;
 
   return (
-    <section id="how" className="bg-white py-16 lg:py-24">
+    <section id="how" className="bg-white py-12 lg:py-16">
       <div className="mx-auto max-w-screen-xl px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <SectionEyebrow>{t.eyebrow}</SectionEyebrow>
-          <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-neutral-900 lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 lg:text-4xl">
             {t.titleLead}
             <span className="text-primary-700">{t.titleAccent}</span>
           </h2>
-          <p className="mt-5 max-w-2xl text-lg text-neutral-600">{t.body}</p>
+          <p className="mt-4 max-w-2xl text-[15px] text-neutral-600 lg:text-base">{t.body}</p>
         </div>
 
-        <ol className="relative mt-16 grid grid-cols-1 items-stretch gap-x-6 gap-y-16 md:grid-cols-[1fr_auto_1fr_auto_1fr] lg:gap-x-10">
+        <ol className="relative mt-10 grid grid-cols-1 items-stretch gap-x-6 gap-y-12 md:grid-cols-[1fr_auto_1fr_auto_1fr] lg:gap-x-8">
           <Step number={step1.number} title={step1.title} body={step1.body}>
             <div className="flex items-center gap-1.5 rounded-xl border border-neutral-200 bg-white p-1.5 shadow-card">
               <div className="flex min-w-0 flex-1 items-center gap-1.5 px-2.5">
@@ -111,15 +111,15 @@ function Step({
         />
       </div>
 
-      <h3 className="mt-3 text-[22px] font-extrabold leading-tight tracking-tight text-neutral-900">
+      <h3 className="mt-2.5 text-[19px] font-extrabold leading-tight tracking-tight text-neutral-900">
         {title}
       </h3>
-      <p className="mt-2.5 text-[15px] leading-relaxed text-neutral-600">
+      <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">
         {body}
       </p>
 
-      <div className="mt-auto flex h-[176px] items-center justify-center pt-7">
-        <div className="w-full max-w-[300px]">{children}</div>
+      <div className="mt-auto flex h-[150px] items-center justify-center pt-5">
+        <div className="w-full max-w-[280px]">{children}</div>
       </div>
     </li>
   );
